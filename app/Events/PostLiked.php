@@ -11,19 +11,16 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class PostCreated implements ShouldBroadcast
+class PostLiked implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    /**
-     * @var Post
-     */
     public $post;
 
     /**
      * Create a new event instance.
      *
-     * @param Post $post
+     * @return void
      */
     public function __construct(Post $post)
     {
